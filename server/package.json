@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "type": "module",
+  "private": true,
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "better-auth": "^1.2.8",
+    "drizzle-orm": "^0.44.2",
+    "hono": "^4.7.11",
+    "shared": "workspace:*",
+    "wrangler": "^4.19.1",
+    "zod": "^3.25.56"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "drizzle-kit": "^0.31.1"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    // Environment setup
+    "lib": [
+      "ESNext"
+    ],
+    "module": "ESNext",
+    // Type checking
+    "strict": true,
+    // Additional checks
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    // Output configuration
+    "declaration": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.test.ts",
+    "dist"
+  ]
+}

@@ -1,4 +1,17 @@
 {
+  // hide folders to remove clutter
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/eslint.*": true,
+    "**/bun.lock": true,
+    "**/tsconfig.*": true,
+    "**/env.d.ts": true,
+    // "**/.vscode": true,
+    "**/.gitignore": true,
+    "**/.wrangler": true,
+    "**/worker-configuration.d.ts": true
+  },
   // Disable the default formatter, use eslint instead
   "editor.formatOnSave": false,
   // Auto fix

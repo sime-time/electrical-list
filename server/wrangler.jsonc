@@ -1,14 +1,22 @@
 {
   "$schema": "/node_modules/wrangler/config-schema.json",
-  "name": "server",
+  "name": "electrical-list-server",
   "main": "src/main.ts",
-  "compatibility_date": "2025-06-07"
-  // "compatibility_flags": [
-  //   "nodejs_compat"
-  // ],
+  "compatibility_date": "2025-06-07",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "electrical-list-db",
+      "database_id": "e09d2cc2-80d3-488b-9d56-895affb54df4",
+      "migrations_dir": "src/db/migrations"
+    }
+  ]
   // "vars": {
   //   "MY_VAR": "my-variable"
-  // },
+  // }
   // "kv_namespaces": [
   //   {
   //     "binding": "MY_KV_NAMESPACE",
@@ -19,13 +27,6 @@
   //   {
   //     "binding": "MY_BUCKET",
   //     "bucket_name": "my-bucket"
-  //   }
-  // ],
-  // "d1_databases": [
-  //   {
-  //     "binding": "MY_DB",
-  //     "database_name": "my-database",
-  //     "database_id": ""
   //   }
   // ],
   // "ai": {

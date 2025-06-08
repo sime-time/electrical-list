@@ -22,6 +22,9 @@
     "deploy:client": "bun run build:client && bunx wrangler pages deploy client/dist",
     "deploy:server": "cd server && bun run deploy",
     "postinstall": "bun run build:shared && bun run build:server",
+    "db:generate": "cd server && bun drizzle-kit generate",
+    "db:migrate": "cd server && bun drizzle-kit migrate",
+    "db:studio": "cd server && bun drizzle-kit studio",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
@@ -30,10 +33,13 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.14.1",
-    "eslint": "^9.28.0"
+    "better-auth": "^1.2.8",
+    "eslint": "^9.28.0",
+    "zod": "^3.25.56"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "dotenv": "^16.5.0",
     "wrangler": "^4.19.1"
   }
 }

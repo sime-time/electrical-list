@@ -11,7 +11,7 @@ export const auth = betterAuth({
   advanced: {
     database: {
       // don't use better-auth's default uuid generation
-      // because we are using serial integers for primary keys
+      // because we will use sql-lite's primary key integers
       generateId: false,
     },
   },

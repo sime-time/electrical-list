@@ -1,8 +1,8 @@
-# electrical-list-app 
+# electrical-list
 
-app for my brother who is an electrician
+an app for my brother who is an electrician.
 
-electricians have a lot more materials to remember to buy than other trades. most of items are forgotten and they have to return to the store to buy them. this is an app to keep track of items needed. 
+electricians have a lot more materials to remember to buy than other trades. most of items are forgotten and they have to return to the store to buy them. this is an app to keep track of items needed.
 
 ## stack
 ```
@@ -43,4 +43,3 @@ To run:
 ```bash
 bun run dev
 ```
-

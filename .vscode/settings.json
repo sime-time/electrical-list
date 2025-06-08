@@ -9,7 +9,7 @@
     "**/env.d.ts": true,
     // "**/.vscode": true,
     "**/.gitignore": true,
-    "**/.wrangler": true,
+    // "**/.wrangler": true,
     "**/worker-configuration.d.ts": true
   },
   // Disable the default formatter, use eslint instead

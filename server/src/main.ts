@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { auth } from "./lib/auth";
+import jobRoute from "./routes/jobRoute";
 
 interface CloudflareBindings {
   BETTER_AUTH_SECRET: string;
@@ -8,24 +9,16 @@ interface CloudflareBindings {
 
 const app = new Hono<{ Bindings: CloudflareBindings }>();
 
-app.use(cors());
-
 // catch-all to handle better-auth routes
 app.on(["POST", "GET"], "/api/auth/**", c => auth.handler(c.req.raw));
 
-app.get("/", (c) => {
-  return c.text("Hello World");
-});
+// middleware
+app.use(cors());
 
-app.get("/hello", async (c) => {
-  const data = {
-    message: "Hello",
-    success: true,
-  };
+// routes
+app.route("/job", jobRoute);
 
-  return c.json(data, { status: 200 });
-});
-
+// serve
+export default app;
 // In Cloudflare Workers, the "listening" is handled by the Cloudflare infrastructure,
 // the export default app is how you hand off your Hono application to that infrastructure.
-export default app;

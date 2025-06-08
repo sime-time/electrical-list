@@ -1,7 +1,8 @@
-# vite-hono-mono
-inspired by bhvr.dev monorepo
+# electrical-list-app 
 
-this is a boilerplate for my personal SPA projects in 2025
+app for my brother who is an electrician
+
+electricians have a lot more materials to remember to buy than other trades. most of items are forgotten and they have to return to the store to buy them. this is an app to keep track of items needed. 
 
 ## stack
 ```
@@ -13,13 +14,15 @@ tailwind
 daisy ui
 pinia
 -> cloudflare pages
-
+```
+```
 server:
 hono
 drizzle
 sqlite (cloudflare d1)
 -> cloudflare workers
-
+```
+```
 both:
 typescript
 zod
@@ -41,11 +44,3 @@ To run:
 bun run dev
 ```
 
-To change the name of the server deployment on cloudflare workers:
-1. Go to server/wrangler.jsonc
-2. Change the name field
-
-To get the cloudflare workers env variables:
-https://orm.drizzle.team/docs/guides/d1-http-with-drizzle-kit
-
-This project was created using `bun init` in bun v1.2.15. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
